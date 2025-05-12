@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图结构可视化</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <div id="graph-container"></div>
+    <div class="top-controls">
+        <button id="generate-btn" title="生成新样例"></button>
+        <button id="export-btn" title="导出当前样例"></button>
+    </div>
+    <div class="zoom-controls">
+        <button onclick="zoomIn()">放大</button>
+        <button onclick="zoomOut()">缩小</button>
+        <button onclick="resetZoom()">重置</button>
+    </div>
+
+    <!-- 核心功能模块 -->
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/graphGenerator.js"></script>
+    <script src="../src/js/renderer.js"></script>
+    <script src="../src/js/controls.js"></script>
+    <script src="../src/js/main.js"></script>
+</body>
+
+</html>
