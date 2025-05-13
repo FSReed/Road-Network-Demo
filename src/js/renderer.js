@@ -64,9 +64,9 @@ class GraphRenderer {
             .data(edges)
             .enter()
             .append("path")
-            .attr("stroke", this.config.style.edgeColor)
-            .attr("stroke-width", this.config.style.edgeWidth)
-            .attr("stroke-opacity", this.config.style.edgeOpacity)
+            .attr("stroke", d => d.isBridge ? this.config.style.bridgeColor : this.config.style.edgeColor)
+            .attr("stroke-width", d => d.isBridge ? this.config.style.bridgeWidth : this.config.style.edgeWidth)
+            .attr("stroke-opacity", d => d.isBridge ? this.config.style.bridgeOpacity : this.config.style.edgeOpacity)
             .attr("fill", "none")
             .attr("d", d => {
                 return d3.line()

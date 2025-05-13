@@ -115,6 +115,7 @@ class GraphGenerator {
             return {
                 source: a.id,
                 target: b.id,
+                isBridge: Math.random() < CONFIG.graph.bridgeProb, // 以一定概率生成桥梁
                 points: this.makePoints(a, b)
             };
         });

@@ -10,7 +10,8 @@ const CONFIG = {
         maxTries: 30,       // 采样尝试次数
         width: 1200,        // 图形宽度
         height: 800,        // 图形高度
-        edgeRemoveProb: 0.2 // 随机去除部分边的概率
+        edgeRemoveProb: 0.2, // 随机去除部分边的概率
+        bridgeProb: 0.15    // 边被标记为bridge的概率
     },
 
     // 样式配置
@@ -19,7 +20,10 @@ const CONFIG = {
         edgeColor: "#4a9eff",
         edgeOpacity: 0.6,
         nodeRadius: 8,
-        edgeWidth: 2
+        edgeWidth: 2,
+        bridgeColor: "#ffffff",
+        bridgeWidth: 3,
+        bridgeOpacity: 0.8,
     },
 
     // 缩放配置
